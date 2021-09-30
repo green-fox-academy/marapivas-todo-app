@@ -4,6 +4,7 @@ public class Main {
         PrintUsage printUsage = new PrintUsage();
         AddNewTask addNewTask = new AddNewTask();
         PrintSourceList printSourceList = new PrintSourceList();
+        CheckTask checkTask = new CheckTask();
         RemoveTask removeTask = new RemoveTask();
 
         if (args.length == 0) {
@@ -40,7 +41,18 @@ public class Main {
                     break;
 
                 case "-c":
-                    System.out.println("Completes a task");
+                    try {
+                        try {
+                            int number = Integer.parseInt(args[1]);
+                            checkTask.checkTask(number);
+                        }catch (NumberFormatException e) {
+                            System.out.println("Unable to check: index is not a number.");
+                        }
+
+                    }catch (ArrayIndexOutOfBoundsException e){
+                        System.out.println("Unable to check: no index provided.");
+                    }
+
                     break;
 
                 default:

@@ -17,7 +17,6 @@ public class RemoveTask {
                 System.out.println("Unable to remove: index is out of bound.");
             }
 
-
         } catch (IOException e) {
             System.out.println("file not found");
         }

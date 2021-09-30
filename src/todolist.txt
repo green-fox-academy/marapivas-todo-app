@@ -1,5 +1,5 @@
-Walk the dog
-Do homework
-Get lunch
-Get dinner
-test task
+[ ] Walk the dog
+[X] Do homework
+[ ] Get lunch
+[ ] Get dinner
+[ ] test task

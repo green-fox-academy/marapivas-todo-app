@@ -16,7 +16,7 @@ public class AddNewTask {
                 File file = new File(path.toString());
                 FileWriter fileWriter = new FileWriter(file, true);
 
-                fileWriter.write("\n" + arg);
+                fileWriter.write("\n" + "[ ] " + arg);
                 fileWriter.close();
             } catch (ArrayIndexOutOfBoundsException exception) {
                 System.out.println("Unable to add: no task provided");
